@@ -1,0 +1,21 @@
+String a = 'I like';
+String b = 'SoftServe';
+Integer c = 5;
+StrategyContext sc1 = new StrategyContext(new StrategyFirst());
+StrategyContext sc2 = new StrategyContext(new StrategySecond());
+System.debug(sc1.doSomething(a, b, c));
+System.debug(sc2.doSomething(a, b, c));
+
+String d = 'Camaro';
+String e = 'Corvette';
+String f = 'Db11';
+System.debug('MPH speed of ' + d + ' is: ' + CarSpeed.getTopSpeed(d));
+System.debug('MPH speed of ' + e + ' is: ' + CarSpeed.getTopSpeed(e));
+System.debug('MPH speed of ' + f + ' is: ' + CarSpeed.getTopSpeed(f));
+System.debug('KPH speed of ' + d + ' is: ' + CarSpeedAdapter.getTopSpeed(d));
+System.debug('KPH speed of ' + e + ' is: ' + CarSpeedAdapter.getTopSpeed(e));
+System.debug('KPH speed of ' + f + ' is: ' + CarSpeedAdapter.getTopSpeed(f));
+
+String g = 'Saddam Hussein';
+System.debug(CarRentalService.rentCar(g));
+System.debug(CarRentalProxy.rentCar(g));
